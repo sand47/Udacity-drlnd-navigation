@@ -15,7 +15,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 3 - turn right.<br>
 <br> <br>
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
-I have consider a Deep Q-learning algorithm and resulting output is a average score of +15 over 100 episodes.
+I have consider a Deep Q-learning algorithm and resulting output is a average score of +15 in 543 episodes.
 
 ## Getting Started
 - clone this project to your computer <br>
