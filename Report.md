@@ -60,7 +60,7 @@ if you want to care more about future, you should take a large 𝞬
     Environment solved in 543 episodes!	Average Score: 15.03
 ![train_network](https://github.com/sand47/Udacity-drlnd-navigation/blob/master/output_graph.PNG)
 ## More Detail Info
-Please see: [Navigation.ipynb](https://github.com/yefengjie/udacity-exercise-navigation/blob/master/Navigation.ipynb)
+Please see: [Navigation.ipynb](https://github.com/sand47/Udacity-drlnd-navigation/blob/master/Navigation.ipynb)
 ## Ideas for Future Work
 - choose a different network architecture
     - deeper network
