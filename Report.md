@@ -14,26 +14,25 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 ## Learning Algorithm
-We use deep Q-learning algorithm to train the agent. If you do not be familiar with it, please read this [research paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+I have used deep Q-learning algorithm to train the agent. Please read this [research paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) to get more insights about the topic
 
-DQN takes a game image as a input, in this project, we only learning from discrete action space 
-
-### The Q-Network is shown below
+### The Q-Network Architecture 
 
     QNetwork(
       (Fully connected layer1): Linear(in_features=37, out_features=64, bias=True)
       (Fully connected layer2): Linear(in_features=64, out_features=64, bias=True)
       (Fully connected layer3): Linear(in_features=64, out_features=64, bias=True)
-      (Fully connected layer4): Linear(in_features=64, out_features=4, bias=True)
+      (Fully connected layer4): Linear(in_features=64, out_features=64, bias=True)
+      (Fully connected layer5): Linear(in_features=64, out_features=4, bias=True)
     ) 
 ### hyper-parameter
 
     BUFFER_SIZE = int(1e5)  # replay buffer size
     BATCH_SIZE = 64  # minibatch size
-    GAMMA = 0.99  # discount factor
+    GAMMA = 0.95  # discount factor
     TAU = 1e-3  # for soft update of target parameters
     LR = 5e-4  # learning rate
-    UPDATE_EVERY = 4  # how often to update the network
+    UPDATE_EVERY = 5  # how often to update the network
     eps_start (float): starting value of epsilon, for epsilon-greedy action selection
     eps_end (float): minimum value of epsilon
     eps_decay (float): multiplicative factor (per episode) for decreasing epsilon
@@ -51,17 +50,15 @@ the agent will care more about future rewards if 𝞬 is large<br>
 if you want to care more about future, you should take a large 𝞬
 
 ## Train The Network
-    Episode 100	Average Score: 0.33
-    Episode 200	Average Score: 2.68
-    Episode 300	Average Score: 7.26
-    Episode 400	Average Score: 10.07
-    Episode 500	Average Score: 11.49
-    Episode 600	Average Score: 12.94
-    Episode 700	Average Score: 14.08
-    Episode 800	Average Score: 14.39
-    Episode 851	Average Score: 15.01
-    Environment solved in 751 episodes!	Average Score: 15.01  
-![train_network](https://raw.githubusercontent.com/yefengjie/udacity-exercise-navigation/master/train_network.png)
+    Episode 100	Average Score: 0.64
+    Episode 200	Average Score: 4.32
+    Episode 300	Average Score: 7.44
+    Episode 400	Average Score: 10.66
+    Episode 500	Average Score: 12.00
+    Episode 600	Average Score: 14.38
+    Episode 643	Average Score: 15.03
+    Environment solved in 543 episodes!	Average Score: 15.03
+![train_network](https://github.com/sand47/Udacity-drlnd-navigation/blob/master/output_graph.PNG)
 ## More Detail Info
 Please see: [Navigation.ipynb](https://github.com/yefengjie/udacity-exercise-navigation/blob/master/Navigation.ipynb)
 ## Ideas for Future Work
