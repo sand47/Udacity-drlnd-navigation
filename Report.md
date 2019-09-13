@@ -1,7 +1,7 @@
 # Udacity Exercise Navigation Report
 The navigation project is using Deep Q-learing to train an agent to collect yellow bananas in an unity environment.
 ## The Environment Description
-In this project, you will train an agent to navigate (and collect bananas!) in a large, square world.
+In this project, I have trained an agent to navigate (and collect bananas!) in a large, square world.
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.
 
@@ -63,8 +63,9 @@ if you want to care more about future, you should take a large 𝞬
 Please see: [Navigation.ipynb](https://github.com/sand47/Udacity-drlnd-navigation/blob/master/Navigation.ipynb)
 ## Ideas for Future Work
 - choose a different network architecture
-    - deeper network
-    - use dropout
+    - Use conv-net with image pixels as input
+    - deeper network 
+    - use dropout, bathnorm and use below algorithm to boost DQN
 - use different learning algorithm 
     - [prioritized experience replay](https://arxiv.org/abs/1511.05952)
     - [Dueling DQN](https://arxiv.org/abs/1511.06581)
